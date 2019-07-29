@@ -5,3 +5,4 @@ alias virsh="virsh --connect qemu:///system"
 alias cal="cal -m"
 alias jsonpp='python -m json.tool | less'
 alias genpasswd="strings /dev/urandom | tr -cd '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c 32; echo"
+alias sudo="sudo -E"
