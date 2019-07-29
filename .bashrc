@@ -5,7 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export GIT_EDITOR=vim
+export EDITOR=vim
+export GIT_EDITOR=$EDITOR
+export SYSTEMD_EDITOR=$EDITOR
 
 source ~/.aliases
 source ~/.bashcolors
