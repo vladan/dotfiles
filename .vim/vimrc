@@ -1,0 +1,47 @@
+source ~/.vim/vundlerc.vim
+
+syntax on
+filetype plugin indent on
+
+set omnifunc=syntaxcomplete#Complete
+
+" unset mouse
+set mouse=
+
+" Default tab is 4 spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+" Highlight searches
+set hlsearch
+set showmatch
+
+" Use TAB to switch between buffers
+noremap <tab> :bn<CR>
+noremap <S-tab> :bp<CR>
+
+" Highlight trailing whitespace (darker red)
+highlight WhitespaceEOL ctermbg=124* guibg=#ab0d0d
+match WhitespaceEOL /\s\+\%#\@<!$/
+
+" Remove all trailing whitespace by pressing Ctrl+k
+nnoremap <C-k> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+autocmd FileType rst        set textwidth=79
+autocmd FileType html       set softtabstop=2 shiftwidth=2 omnifunc=htmlcomplete#CompleteTags
+autocmd FileType yaml       set softtabstop=2 shiftwidth=2
+autocmd FileType css        set softtabstop=2 shiftwidth=2 omnifunc=csscomplete#CompleteCSS
+
+" Toggles on different plugins/modes
+noremap  <F1> :ToggleMouse<CR>
+inoremap <F1> <Esc>:ToggleMouse<CR>a
+nmap <F3> :set nonumber!<CR>
+nmap <F5> :NERDTreeToggle<CR>
+set pastetoggle=<F2>
+
+" Enable vimrc files per project, e.g: ./project/.vimrc
+set exrc
+
+" Disable unsafe commands in project vimrc
+set secure
