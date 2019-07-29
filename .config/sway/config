@@ -212,4 +212,12 @@ bar {
     swaybar_command waybar
 }
 
+# Lock screen
+bindsym $mod+z exec swaylock -c 000000
+
+# Take full screen screenshot with PrtScr
+bindsym Print exec grim -t png /tmp/screen.png
+# Take area screenshot with Shift+PrtScr
+bindsym Shift+Print exec slurp
+
 include /etc/sway/config.d/*
