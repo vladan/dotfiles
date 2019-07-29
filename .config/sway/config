@@ -220,4 +220,8 @@ bindsym Print exec grim -t png /tmp/screen.png
 # Take area screenshot with Shift+PrtScr
 bindsym Shift+Print exec slurp
 
+# Remove title from windows
+default_border pixel 1
+bindsym $mod+t border toggle
+
 include /etc/sway/config.d/*

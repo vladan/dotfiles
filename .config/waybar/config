@@ -5,11 +5,18 @@
   // Choose the order of the modules
   "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": [],
-  "modules-right": ["custom/vpn", "network", "battery", "pulseaudio", "cpu", "clock", "tray"],
+  "modules-right": ["custom/vpn", "network", "battery", "pulseaudio", "temperature", "cpu", "clock", "tray"],
   // Module config
   "sway/mode": {
     "tooltip": false,
     "format": "<span weight=\"bold\">{}</span>"
+  },
+  "temperature": {
+    "thermal-zone": 1,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureC}°C "
   },
   "custom/vpn": {
     "interval": 5,
