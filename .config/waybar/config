@@ -5,7 +5,7 @@
   // Choose the order of the modules
   "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": [],
-  "modules-right": ["custom/vpn", "network", "battery", "pulseaudio", "temperature", "cpu", "clock", "tray"],
+  "modules-right": ["custom/vpn", "network", "battery", "pulseaudio", "cpu", "temperature", "clock", "tray"],
   // Module config
   "sway/mode": {
     "tooltip": false,
@@ -38,17 +38,17 @@
   "battery": {
     "tooltip": false,
     "states": {
-        // "good": 95,
+        "good": 95,
         "warning": 30,
         "critical": 15
     },
     "format": "{capacity}% {icon}",
     "format-alt": "{time} {icon}",
-    "format-charging": "{capacity}% {icon}",
-    "format-plugged": "{capacity}% ",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% "
     // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", "", "", ""]
+    // "format-full": ""
+    // "format-icons": ["", "", "", "", "", "", ""]
   },
   "pulseaudio": {
     "tooltip": false,

@@ -22,7 +22,7 @@ set $menu bemenu-run | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/vladan/.config/sway/bkg.jpg fill
 #
 # Example configuration:
 #
@@ -223,5 +223,32 @@ bindsym Shift+Print exec slurp
 # Remove title from windows
 default_border pixel 1
 bindsym $mod+t border toggle
+
+# Background
+set $bg #232425
+# Background active
+set $ba #191919
+# Background inactive
+set $bi #3f3f3f
+# Foreground active
+set $fa #eff1f5
+# Foreground inactive
+set $fi #646464
+# Border active
+set $bra #7a7a7a
+# Border inactive
+set $bri #000000
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $bra    $ba     $fa     $bg       $bra
+client.focused_inactive $bra    $ba     $fi     $bg       $bri
+client.unfocused        $bri    $bi     $fi     $bg       $bri
+#client.urgent          $br    $br     $fg     $bg       $br #currently not implemented
+#client.placeholder     $br    $br     $fg     $bg       $br #currently not implemented
+client.background       $bg
+
+gaps inner 0
+gaps outer 0
+#smart_gaps on
 
 include /etc/sway/config.d/*
