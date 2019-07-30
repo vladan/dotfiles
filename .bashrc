@@ -18,7 +18,7 @@ export PS1="${Yellow}\d \A ${Off}${Cyan}\u@\h: ${Off}\w ${Green}\$(parse_git_bra
 
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUSERBASE=~/.env/python
-export PATH=~/.env/python/bin:~/bin:$PATH
+export PATH=$PYTHONUSERBASE/bin:$HOME/bin:$PATH
 
 export HISTCONTROL=ignoredups:erasedups  # Avoid duplicates
 export HISTSIZE=100000000                # big big history
