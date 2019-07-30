@@ -8,6 +8,7 @@
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export SYSTEMD_EDITOR=$EDITOR
+export MANWIDTH=80
 
 source ~/.aliases
 source ~/.bashcolors
