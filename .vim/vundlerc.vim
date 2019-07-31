@@ -33,7 +33,7 @@ let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠"
 "
 " Rust linting options
-let g:ale_rust_cargo_use_clippy = 1 " use `rustup component add clippy-preview` to get it
-let g:rustfmt_autosave = 1
+let g:ale_rust_cargo_use_clippy = 1 " installed with `rustup component add clippy-preview`
+let g:rustfmt_autosave = 1          " installed with `rustup component add rustfmt`
 
 call vundle#end()
