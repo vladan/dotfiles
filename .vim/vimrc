@@ -8,6 +8,13 @@ set omnifunc=syntaxcomplete#Complete
 " unset mouse
 set mouse=
 
+" Maintain undo history between sessions
+if !isdirectory("/tmp/.vim-undo-dir")
+    call mkdir("/tmp/.vim-undo-dir", "", 0700)
+endif
+set undodir=/tmp/.vim-undo-dir
+set undofile
+
 " Default tab is 4 spaces
 set tabstop=4
 set softtabstop=4
