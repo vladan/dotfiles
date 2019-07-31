@@ -3,3 +3,5 @@
 .lesshst
 .viminfo
 .wget-hsts
+.nix-channels
+.nix-profile
