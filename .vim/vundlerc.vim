@@ -23,10 +23,17 @@ let g:scala_scaladoc_indent = 1
 
 Plugin 'elmcast/elm-vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 
 " Async Lint Engine
 Plugin 'w0rp/ale'
-let g:ale_linters = {'rust': ['rustc']}
+let g:ale_linters = {}
 let g:ale_completion_enabled = 1
+let g:ale_sign_error = "✗"
+let g:ale_sign_warning = "⚠"
+"
+" Rust linting options
+let g:ale_rust_cargo_use_clippy = 1 " use `rustup component add clippy-preview` to get it
+let g:rustfmt_autosave = 1
 
 call vundle#end()

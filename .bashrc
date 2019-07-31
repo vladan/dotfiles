@@ -18,7 +18,7 @@ export PS1="${Yellow}\d \A ${Off}${Cyan}\u@\h: ${Off}\w ${Green}\$(parse_git_bra
 
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUSERBASE=~/.env/python
-export PATH=$PYTHONUSERBASE/bin:$HOME/bin:$PATH
+export PATH=$PYTHONUSERBASE/bin:$HOME/bin:$PATH:$HOME/.cargo/bin/
 
 export HISTCONTROL=ignoredups:erasedups  # Avoid duplicates
 export HISTSIZE=100000000                # big big history
@@ -34,3 +34,6 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
 fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
+
+# Rust src path used for library tagging
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/

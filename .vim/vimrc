@@ -28,10 +28,17 @@ match WhitespaceEOL /\s\+\%#\@<!$/
 
 " Remove all trailing whitespace by pressing Ctrl+k
 nnoremap <C-k> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-autocmd FileType rst        set textwidth=79
+
+" Language indents
+autocmd FileType py         set textwidth=79
 autocmd FileType html       set softtabstop=2 shiftwidth=2 omnifunc=htmlcomplete#CompleteTags
 autocmd FileType yaml       set softtabstop=2 shiftwidth=2
 autocmd FileType css        set softtabstop=2 shiftwidth=2 omnifunc=csscomplete#CompleteCSS
+
+autocmd FileType rust nmap gd <Plug>(rust-def)
+autocmd FileType rust nmap gs <Plug>(rust-def-split)
+autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
+autocmd FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Toggles on different plugins/modes
 noremap  <F1> :ToggleMouse<CR>
