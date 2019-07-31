@@ -6,3 +6,5 @@
 .nix-channels
 .nix-profile
 .netrwhist
+.esd_auth
+pavucontrol.ini
