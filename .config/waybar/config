@@ -19,12 +19,7 @@
     "format": "{temperatureC}°C "
   },
   "custom/vpn": {
-    "interval": 5,
-    "tooltip": false,
-    "format": "{}",
-    "return-type": "json",
-    // Script at https://gitlab.com/krathalan/miscellaneous-scripts
-    "exec": "bash $HOME/Git/miscellaneous-scripts/vpn_detect mullvad-us5"
+    // setup wireguard here
   },
   "network": {
     "tooltip": false,
