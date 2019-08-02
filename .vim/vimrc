@@ -36,8 +36,8 @@ match WhitespaceEOL /\s\+\%#\@<!$/
 " Remove all trailing whitespace by pressing Ctrl+k
 nnoremap <C-k> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
-" Language indents
-autocmd FileType py         set textwidth=79
+" Language indents and line lengths
+autocmd FileType py,rst,md  set textwidth=79
 autocmd FileType html       set softtabstop=2 shiftwidth=2 omnifunc=htmlcomplete#CompleteTags
 autocmd FileType yaml       set softtabstop=2 shiftwidth=2
 autocmd FileType css        set softtabstop=2 shiftwidth=2 omnifunc=csscomplete#CompleteCSS

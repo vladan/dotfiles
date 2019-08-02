@@ -24,6 +24,7 @@ let g:scala_scaladoc_indent = 1
 Plugin 'elmcast/elm-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
+Plugin 'Rykka/riv.vim'
 
 " Async Lint Engine
 Plugin 'w0rp/ale'
