@@ -29,12 +29,20 @@ set showmatch
 noremap <tab> :bn<CR>
 noremap <S-tab> :bp<CR>
 
-" Highlight trailing whitespace (darker red)
-highlight WhitespaceEOL ctermbg=124* guibg=#ab0d0d
+" Highlight trailing whitespace (darker red) and remove all with Ctrl+k
+highlight WhitespaceEOL ctermbg=red guibg=#ab0d0d
 match WhitespaceEOL /\s\+\%#\@<!$/
-
-" Remove all trailing whitespace by pressing Ctrl+k
 nnoremap <C-k> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" Much better with Tomorrow Night Bright color theme set in alacritty
+set background=light
+highlight SignColumn ctermbg=236
+
+" ALE colors
+highlight ALEWarning ctermbg=Yellow
+highlight ALEWarning ctermfg=Black
+highlight ALEError ctermbg=DarkRed
+highlight ALEError ctermfg=White
 
 " Language indents and line lengths
 autocmd FileType py,rst,md  set textwidth=79
