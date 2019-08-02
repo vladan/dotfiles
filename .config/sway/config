@@ -218,7 +218,7 @@ bindsym $mod+z exec swaylock -c 000000
 # Take full screen screenshot with PrtScr
 bindsym Print exec grim -t png /tmp/screen.png
 # Take area screenshot with Shift+PrtScr
-bindsym Shift+Print exec slurp
+bindsym Shift+Print exec grim -g "$(slurp)" /tmp/screen.png
 
 # Remove title from windows
 default_border pixel 1
