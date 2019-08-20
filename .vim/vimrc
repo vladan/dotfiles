@@ -68,6 +68,7 @@ inoremap <F1> <Esc>:ToggleMouse<CR>a
 nmap <F3> :set nonumber!<CR>
 nmap <F5> :NERDTreeToggle<CR>
 set pastetoggle=<F2>
+nmap <leader>e :ALEDetail <cr>
 
 " Enable vimrc files per project, e.g: ./project/.vimrc
 set exrc
