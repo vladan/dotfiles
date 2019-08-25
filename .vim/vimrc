@@ -60,7 +60,6 @@ set exrc
 " Disable unsafe commands in project vimrc
 set secure
 
-" Plugin/language configuration
-source ~/.vim/rust.vim
+" Plugin configuration
 source ~/.vim/ale.vim
 source ~/.vim/nerdtree.vim

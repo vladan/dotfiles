@@ -18,11 +18,15 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'derekwyatt/vim-scala'
 let g:scala_scaladoc_indent = 1
 
+" Elm
 Plugin 'elmcast/elm-vim'
+" Rust
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer' " Rust Language Server
+" RST
 Plugin 'Rykka/riv.vim' " rst formatter and highlighter
-
+" Python
+Plugin 'vim-scripts/indentpython.vim'
 " Async Lint Engine
 Plugin 'w0rp/ale'
 
