@@ -1,3 +1,19 @@
+" Python setup for VIM.
+" Features:
+"  - Autocompletion with pyls that opens documentation in another window while
+"    moving through names.
+"  - Static type checking with mypy.
+"  - Autoformat on save with autopep8.
+"  - PyLint for keeping score.
+"
+" Packages required for this config to work:
+" pip3 install [--user] \
+"     mypy \
+"     pylint \
+"     autopep8 \
+"     git+https://github.com/palantir/python-language-server.git
+"
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
