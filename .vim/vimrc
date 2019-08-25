@@ -59,7 +59,3 @@ nmap <leader>e :ALEDetail <cr>
 set exrc
 " Disable unsafe commands in project vimrc
 set secure
-
-" Plugin configuration
-source ~/.vim/ale.vim
-source ~/.vim/nerdtree.vim

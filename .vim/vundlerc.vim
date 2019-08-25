@@ -29,5 +29,7 @@ Plugin 'Rykka/riv.vim' " rst formatter and highlighter
 Plugin 'vim-scripts/indentpython.vim'
 " Async Lint Engine
 Plugin 'w0rp/ale'
+" Git
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
