@@ -3,3 +3,15 @@
 \#*\#
 *tags
 TAGS
+.python_history
+.mypy_cache
+.bash_history
+.bash_logout
+.lesshst
+.viminfo
+.wget-hsts
+.nix-channels
+.nix-profile
+.netrwhist
+.esd_auth
+pavucontrol.ini
