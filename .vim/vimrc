@@ -2,7 +2,6 @@ source ~/.vim/vundlerc.vim
 
 syntax on
 filetype plugin indent on
-
 set omnifunc=syntaxcomplete#Complete
 
 " unset mouse
@@ -44,23 +43,9 @@ highlight LineNr ctermbg=232
 highlight Folded ctermbg=DarkGreen
 highlight Folded ctermfg=Black
 
-" ALE colors
-highlight ALEWarning ctermbg=Yellow
-highlight ALEWarning ctermfg=Black
-highlight ALEError ctermbg=DarkRed
-highlight ALEError ctermfg=White
-
 " Language indents and line lengths
-autocmd FileType py,rst,md  set textwidth=79
-autocmd FileType html       set softtabstop=2 shiftwidth=2 omnifunc=htmlcomplete#CompleteTags
-autocmd FileType yaml       set softtabstop=2 shiftwidth=2
-autocmd FileType css        set softtabstop=2 shiftwidth=2 omnifunc=csscomplete#CompleteCSS
-
-autocmd FileType rust nmap gd <Plug>(rust-def)
-autocmd FileType rust nmap gs <Plug>(rust-def-split)
-autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
-autocmd FileType rust nmap <leader>gd <Plug>(rust-doc)
-autocmd FileType rust set  number
+autocmd FileType py,rst,md      set textwidth=79
+autocmd FileType html,yaml,css  set softtabstop=2 shiftwidth=2
 
 " Toggles on different plugins/modes
 noremap  <F1> :ToggleMouse<CR>
@@ -72,6 +57,10 @@ nmap <leader>e :ALEDetail <cr>
 
 " Enable vimrc files per project, e.g: ./project/.vimrc
 set exrc
-
 " Disable unsafe commands in project vimrc
 set secure
+
+" Plugin/language configuration
+source ~/.vim/rust.vim
+source ~/.vim/ale.vim
+source ~/.vim/nerdtree.vim
