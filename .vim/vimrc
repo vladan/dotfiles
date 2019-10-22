@@ -20,15 +20,24 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" Highlight searches
-set hlsearch
+
+set wildignorecase      " Ignore case in command completion
+set laststatus=2        " Always show statusline
+
+" Search settings
+set smartcase  " If an uppercase letter is the query, be case sensitive
+set incsearch  " Highlight matches while typing query
+set hlsearch   " Highlight all search matches
+
+" Highlight matching brackets
 set showmatch
+set mps+=<:> " Also, match < and >
 
 " Use TAB to switch between buffers
 noremap <tab> :bn<CR>
 noremap <S-tab> :bp<CR>
 
-" Highlight trailing whitespace (darker red) and remove all with Ctrl+k
+" Trailing whitespace - highlight in darker red, clean buffer with Ctrl+k
 highlight WhitespaceEOL ctermbg=red guibg=#ab0d0d
 match WhitespaceEOL /\s\+\%#\@<!$/
 nnoremap <C-k> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
@@ -54,7 +63,7 @@ nmap <F3> :set nonumber!<CR>
 nmap <F5> :NERDTreeToggle<CR>
 set pastetoggle=<F2>
 
-" Enable vimrc files per project, e.g: ./project/.vimrc
+" Enable vimrc files per project
 set exrc
 " Disable unsafe commands in project vimrc
 set secure
