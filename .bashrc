@@ -37,3 +37,5 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Rust src path used for library tagging
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
+
+eval "$(stack --bash-completion-script stack)"
