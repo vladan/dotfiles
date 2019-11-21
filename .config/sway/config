@@ -240,7 +240,7 @@ set $bra #7a7a7a
 set $bri #000000
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $bra    $ba     $fa     $bg       $bra
+client.focused          $bra    $bra    $bg     $bg       $bra
 client.focused_inactive $bra    $ba     $fa     $bg       $bri
 client.unfocused        $bri    $bi     $fi     $bg       $bri
 #client.urgent          $br    $br     $fg     $bg       $br #currently not implemented
