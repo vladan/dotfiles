@@ -3,4 +3,4 @@
 #
 
 export IONRCDIR=$HOME/.config/ion
-source $IONRCDIR/rc.ion
+source $IONRCDIR/main.ion

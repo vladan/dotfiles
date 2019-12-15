@@ -14,7 +14,7 @@ fn parse_branch scm
 end
 
 fn PROMPT
-    echo "${c::yellow}$(date '+%A %F %R') ${c::reset}${c::cyan}$(whoami)\@$(hostname): ${c::reset}$PWD ${c::green}$(parse_branch git)${c::magenta}$(parse_branch fossil)"
+    echo "${c::magenta}$(date '+%A %F %R') ${c::yellow}$(whoami)\@$(hostname): ${c::reset}$PWD ${c::green}$(parse_branch git)${c::magenta}$(parse_branch fossil)"
     echo -n "${c::reset}-$ "
 end
 
