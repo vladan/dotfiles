@@ -15,6 +15,7 @@ TAGS
 .netrwhist
 .esd_auth
 .yarnrc
+.fossil
 .emacs.d/
 
 pavucontrol.ini
