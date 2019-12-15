@@ -31,5 +31,10 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'w0rp/ale'
 " Git
 Plugin 'airblade/vim-gitgutter'
+" Drawing ASCII
+Plugin 'vim-scripts/DrawIt'
+
+" Highlight ion shell scripts
+Plugin 'vmchale/ion-vim'
 
 call vundle#end()
