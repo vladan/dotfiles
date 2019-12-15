@@ -14,7 +14,7 @@ source ~/.aliases
 source ~/.bashcolors
 source ~/.functions
 
-export PS1="${Yellow}\d \A ${Off}${Cyan}\u@\h: ${Off}\w ${Green}\$(parse_git_branch)${BPurple}\$(parse_fossil_branch)${Off}\n-$ "
+export PS1="${Yellow}\d \A ${Off}${Cyan}\u@\h: ${Off}\w ${Green}\$(parse_branch git)${BPurple}\$(parse_branch fossil)${Off}\n-$ "
 
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUSERBASE=~/.env/python

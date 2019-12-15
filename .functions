@@ -2,12 +2,9 @@
 
 iploc () { curl -s http://ip-api.com/json/"$1"|tr , '\n'|sed 's/[\"{}]//g'; }
 
-function parse_git_branch () {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-function parse_fossil_branch () {
-    fossil branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+function parse_branch {
+    scmexe=${1:-git}
+    $scmexe branch 2> /dev/null | awk '/^*/{print "("$2")"}'
 }
 
 yell() { echo "$0: $*" >&2; }
