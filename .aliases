@@ -1,6 +1,6 @@
 alias myip="curl http://ip.ie.mk/get"
 alias ls="ls --color"
-alias grep="rg"
+alias grep="grep --color"
 alias virsh="virsh --connect qemu:///system"
 alias cal="cal -m"
 alias genpasswd="strings /dev/urandom | tr -cd '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c 32; echo"
