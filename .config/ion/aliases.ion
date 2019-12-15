@@ -1,0 +1,7 @@
+alias myip="curl http://ip.ie.mk/get"
+alias ls="ls --color"
+alias grep="rg"
+alias virsh="virsh --connect qemu:///system"
+alias cal="cal -m"
+alias sudo="sudo -E"
+alias cat="bat"

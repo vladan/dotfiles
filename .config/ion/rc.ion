@@ -1,0 +1,36 @@
+let EDITOR=vim
+let GIT_EDITOR=$EDITOR
+let SYSTEMD_EDITOR=$EDITOR
+let MANWIDTH=80
+
+source $IONRCDIR/aliases.ion
+
+fn genpasswd
+    strings /dev/urandom | tr -cd '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c 32 && echo
+end
+
+fn parse_branch scm
+    $scm branch ^> /dev/null | awk '/^*/{print "("$2")"}'
+end
+
+fn PROMPT
+    echo "${c::yellow}$(date '+%A %F %R') ${c::reset}${c::cyan}$(whoami)\@$(hostname): ${c::reset}$PWD ${c::green}$(parse_branch git)${c::magenta}$(parse_branch fossil)"
+    echo -n "${c::reset}-$ "
+end
+
+let PYTHONDONTWRITEBYTECODE=1
+let PYTHONUSERBASE=~/.env/python
+let PATH=$PYTHONUSERBASE/bin:$HOME/bin:$PATH:$HOME/.cargo/bin/
+
+let HISTCONTROL=ignoredups:erasedups  # Avoid duplicates
+let HISTSIZE=100000000                # big big history
+let HISTFILESIZE=100000000            # big big history
+
+let LIBVIRT_DEFAULT_URI='qemu:///system'
+
+let SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+let GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+# Rust src path used for library tagging
+let RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
