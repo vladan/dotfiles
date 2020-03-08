@@ -19,3 +19,7 @@ TAGS
 .emacs.d/
 
 pavucontrol.ini
+
+*history
+*.db
+*.journal
