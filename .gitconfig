@@ -3,3 +3,5 @@
 	name = Vladan Popovic
 [core]
 	excludesfile = /home/vladan/.gitignore_global
+[credential]
+	helper = store

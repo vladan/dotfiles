@@ -1,6 +1,7 @@
 *~
 *.sw?
 \#*\#
+.#*
 *tags
 TAGS
 .python_history
@@ -23,3 +24,4 @@ pavucontrol.ini
 *history
 *.db
 *.journal
+.git-credentials
