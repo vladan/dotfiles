@@ -12,3 +12,5 @@ highlight ALEWarning ctermbg=Yellow
 highlight ALEWarning ctermfg=Black
 highlight ALEError ctermbg=DarkRed
 highlight ALEError ctermfg=White
+
+let g:airline#extensions#ale#enabled = 1

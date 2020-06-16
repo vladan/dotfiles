@@ -23,8 +23,6 @@ Plugin 'elmcast/elm-vim'
 " Rust
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer' " Rust Language Server
-" RST
-Plugin 'Rykka/riv.vim' " rst formatter and highlighter
 " Python
 Plugin 'vim-scripts/indentpython.vim'
 " Async Lint Engine
@@ -36,5 +34,12 @@ Plugin 'vim-scripts/DrawIt'
 
 " Highlight ion shell scripts
 Plugin 'vmchale/ion-vim'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'Shougo/vimproc'
+Plugin 'neovimhaskell/haskell-vim.git'
+
+
 
 call vundle#end()
