@@ -1,6 +1,0 @@
-#
-# ~/.ionrc
-#
-
-export IONRCDIR=$HOME/.config/ion
-source $IONRCDIR/main.ion
