@@ -5,7 +5,7 @@
   // Choose the order of the modules
   "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": [],
-  "modules-right": ["custom/vpn", "network", "battery", "pulseaudio", "cpu", "temperature", "clock", "tray"],
+  "modules-right": ["network", "battery", "pulseaudio", "cpu", "temperature", "clock", "tray"],
   // Module config
   "sway/mode": {
     "tooltip": false,
@@ -15,8 +15,8 @@
     "thermal-zone": 1,
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
-    "format-critical": "{temperatureC}°C ",
-    "format": "{temperatureC}°C "
+    "format-critical": " {temperatureC}°C",
+    "format": " {temperatureC}°C"
   },
   "custom/vpn": {
     // setup wireguard here
@@ -24,7 +24,7 @@
   "network": {
     "tooltip": false,
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": " {essid} ({signalStrength}%)",
     "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
     "format-linked": "{ifname} (No IP)",
     "format-alt": "{ifname}: {ipaddr}",
@@ -37,7 +37,7 @@
         "warning": 30,
         "critical": 15
     },
-    "format": "{capacity}% ",
+    "format": " {capacity}%",
     "format-alt": "{time} ",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% "
@@ -46,12 +46,12 @@
     // "format-icons": ["", "", "", "", "", "", ""]
   },
   "pulseaudio": {
-    "tooltip": false,
+    "tooltip": true,
     "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon}",
+    "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
-    "format-source": "{volume}% {icon}",
+    "format-source": "{volume}%",
     "format-source-muted": "",
     "format-icons": {
         "headphones": "",
@@ -60,18 +60,19 @@
         "phone": "",
         "portable": "",
         "car": "",
-        "default": ["", "", ""]
+        // 
+        "default": [""]
     },
     "on-click": "pavucontrol"
   },
   "cpu": {
     "interval": 5,
     "tooltip": false,
-    "format": "{usage}% "
+    "format": " {usage}%"
   },
   "clock": {
     "tooltip": false,
-    "format": "{:%d.%m.%Y %H:%M}"
+    "format": "| {:%d.%m.%Y %H:%M}"
   },
   "tray": {
     "tooltip": false,
