@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'Lokaltog/vim-monotone'
+Plug 'ncm2/float-preview.nvim'
 
 call plug#end()
 
@@ -18,6 +19,7 @@ set mouse=
 syntax on
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
+set completeopt-=preview
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
