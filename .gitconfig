@@ -5,3 +5,5 @@
 	excludesfile = /home/vladan/.gitignore_global
 [credential]
 	helper = store
+[pull]
+	rebase = true
